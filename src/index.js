@@ -16,20 +16,24 @@ const successMessage = () => success({
             addClass: 'notice-pnotify',
 
 });
-const noticeMessage =     () =>   notice({
+const noticeMessage =  () =>   notice({
             title: 'Notice',
             text: 'Please enter a more specific query!',
             delay: 4000,
            addClass: 'notice-pnotify',
 
 });
-        
-const errorCatch = () => error({
+
+const errorCatch = (err) => {
+        error({
+     
             title: 'Error',
-                text: 'Please enter your query!',
-            delay: 4000,
-                addClass: 'notice-pnotify',
-        })
+        text: 'Please enter your query!',
+        delay: 4000,
+        addClass: 'notice-pnotify',
+        type: error,
+    }) 
+}
 
 const errorMessage = () =>  error({
             title: 'Notice',
